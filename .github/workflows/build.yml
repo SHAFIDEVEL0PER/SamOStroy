@@ -21,8 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project 
-        run: echo "Build completed" # Пример. Замените на реальную команду, например: npm run build
+      - name: npm run build
+        run: echo "Build completed"
 
-      - name: Deploy 
-        run: echo "Deploy logic here"
