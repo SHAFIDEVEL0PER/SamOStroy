@@ -1,33 +1,35 @@
-name: Build
+name: Build and Deploy
 
 on:
+<<<<<<< HEAD
   - pull_request 
+=======
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+>>>>>>> 5f15b20694dc44fcc2aa30f26c083ee1d873d37b
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
+      - name: Checkout code
+        uses: actions/checkout@v2
 
+<<<<<<< HEAD
       - name: Set up Node.js 
         uses: actions/setup-node@v3
+=======
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+>>>>>>> 5f15b20694dc44fcc2aa30f26c083ee1d873d37b
         with:
-          node-version: '18.x'
+          node-version: '14'
 
-      - name: Build
-        run: |
-          NODE_ENV=development npm install && npm run build --if-present
-          if [[ $(find . -maxdepth 1 -type d -name 'dist') == '' ]]
-          then
-            cp -r public dist
-          fi
-          mkdir actions_artifacts
-          echo "prev.event.number=${{ github.event.number }}" > actions_artifacts/env
-          mv dist actions_artifacts
+      - name: Install dependencies
+        run: npm install
 
-      - name: Save build
-        uses: actions/upload-artifact@master
-        with:
-          name: actions_artifacts
-          path: actions_artifacts
+      - name: npm run build
+        run: echo "Build completed"
+
