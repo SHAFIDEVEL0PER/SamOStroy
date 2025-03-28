@@ -1,5 +1,3 @@
-[![Build and Deploy](https://github.com/SHAFIDEVEL0PER/SamOStroy/actions/workflows/build.yml/badge.svg)](https://github.com/SHAFIDEVEL0PER/SamOStroy/actions/workflows/build.yml)
-
 # SamOStroy — Сайт строительной компании
 
 **SamOStroy** — профессиональная строительная компания, специализирующаяся на возведении частных и коммерческих объектов под ключ. Наш сайт предоставляет клиентам удобный интерфейс для знакомства с услугами, проектами и контактами компании.
