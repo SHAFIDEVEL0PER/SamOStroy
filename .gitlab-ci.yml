@@ -1,0 +1,25 @@
+stages:
+  - lint
+  - deploy
+
+variables:
+  PUBLIC_DIR: "public"
+
+# Кэширование node_modules для ускорения выполнения
+cache:
+  paths:
+    - node_modules/
+
+# Проверка качества кода
+lint:
+  stage: lint
+  image: node:latest
+  before_script:
+    - npm install -g stylelint eslint
+    - npm install
+  script:
+    - eslint js/**/*.js
+    - stylelint "**/*.css"
+  only:
+    - merge_requests
+  allow_failure: true
