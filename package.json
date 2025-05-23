@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "axios": "^1.6.7",
+    "doxygen": "^0.4.0",
     "package": "^1.0.1",
     "swiper": "^11.1.15",
     "type": "^2.7.3"

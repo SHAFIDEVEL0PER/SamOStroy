@@ -1,0 +1,21 @@
+# Основные настройки проекта
+PROJECT_NAME           = "SamOStroy"
+PROJECT_BRIEF          = "Документация для веб-приложения"
+OUTPUT_DIRECTORY       = ./docs      # Папка для выходных файлов
+CREATE_SUBDIRS         = NO          # Не создавать подпапки в OUTPUT_DIRECTORY
+
+# Настройки входных файлов
+INPUT                  = ./          # Анализировать текущую директорию
+FILE_PATTERNS          = *.js *.html *.css  # Шаблоны файлов для анализа
+RECURSIVE              = YES         # Рекурсивный поиск файлов
+
+# Настройки вывода HTML
+GENERATE_HTML          = YES         # Генерировать HTML
+HTML_OUTPUT            = html        # Подпапка для HTML
+HTML_COLORSTYLE_HUE    = 220         # Цветовая схема (0-360)
+
+# Настройки для JavaScript
+JAVADOC_AUTOBRIEF      = YES        # Использовать первую строку как краткое описание
+OPTIMIZE_OUTPUT_JAVA   = YES        # Оптимизировать для JS (аналогично JavaDoc)
+QUIET                  = NO         # Показывать прогресс генерации
+WARNINGS               = YES        # Показывать предупреждения
