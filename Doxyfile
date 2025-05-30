@@ -1,21 +1,40 @@
 # Основные настройки проекта
 PROJECT_NAME           = "SamOStroy"
-PROJECT_BRIEF          = "Документация для веб-приложения"
-OUTPUT_DIRECTORY       = ./docs      # Папка для выходных файлов
-CREATE_SUBDIRS         = NO          # Не создавать подпапки в OUTPUT_DIRECTORY
+PROJECT_BRIEF          = "Документация для веб-приложения SamOStroy. Проектирование и строительство домов."
+OUTPUT_DIRECTORY       = ./docs
+CREATE_SUBDIRS         = NO
+
+# Язык и кодировка
+OUTPUT_LANGUAGE        = Russian
+DOXYFILE_ENCODING      = UTF-8
 
 # Настройки входных файлов
-INPUT                  = ./          # Анализировать текущую директорию
-FILE_PATTERNS          = *.js *.html *.css  # Шаблоны файлов для анализа
-RECURSIVE              = YES         # Рекурсивный поиск файлов
+INPUT                  = html/ css/ js/ README.md  # Добавляем README.md для главной страницы
+FILE_PATTERNS          = *.js *.html *.css
+RECURSIVE              = YES
+EXCLUDE                = */temp/* */old_versions/*
+
+# Для HTML-файлов
+HTML_FILE_EXTENSION    = .html
+
+# Настройки главной страницы
+USE_MDFILE_AS_MAINPAGE = README.md  # Использовать README.md как основу для index.html
+
+# Для JavaScript (JSDoc-стиль)
+JAVADOC_AUTOBRIEF      = YES
+OPTIMIZE_OUTPUT_JAVADOC = YES
+
+# Для CSS (минимальная поддержка)
+EXTENSION_MAPPING      = .css=CSS
 
 # Настройки вывода HTML
-GENERATE_HTML          = YES         # Генерировать HTML
-HTML_OUTPUT            = html        # Подпапка для HTML
-HTML_COLORSTYLE_HUE    = 220         # Цветовая схема (0-360)
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_COLORSTYLE_HUE    = 220
+HTML_EXTRA_STYLESHEET = css/custom.css  # Добавляем кастомные стили
+HTML_EXTRA_FILES       = images/logo.png  # Добавляем дополнительные файлы
 
-# Настройки для JavaScript
-JAVADOC_AUTOBRIEF      = YES        # Использовать первую строку как краткое описание
-OPTIMIZE_OUTPUT_JAVA   = YES        # Оптимизировать для JS (аналогично JavaDoc)
-QUIET                  = NO         # Показывать прогресс генерации
-WARNINGS               = YES        # Показывать предупреждения
+# Включение большего количества информации
+EXTRACT_ALL            = YES  # Извлекать документацию для всех элементов
+EXTRACT_PRIVATE        = YES  # Включать приватные члены
+EXTRACT_STATIC         = YES  # Включать статические члены

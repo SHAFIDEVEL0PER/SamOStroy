@@ -24,13 +24,22 @@
 */
 var NAVTREE =
 [
-  [ "SamOStroy", "index.html", ]
+  [ "SamOStroy", "index.html", [
+    [ "SamOStroy — Сайт строительной компании", "index.html#autotoc_md0", [
+      [ "🔨 Основные функции сайта", "index.html#autotoc_md1", null ],
+      [ "🛠 Технологии", "index.html#autotoc_md2", null ],
+      [ "🚀 Установка и запуск", "index.html#autotoc_md3", null ]
+    ] ],
+    [ "Файлы", "files.html", [
+      [ "Файлы", "files.html", "files_dup" ]
+    ] ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"company_8html.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronization';
-var SYNCOFFMSG = 'click to enable panel synchronization';
+var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';
+var SYNCOFFMSG = 'нажмите на включить для синхронизации панелей';
